@@ -15,7 +15,7 @@ These instructions assume you're running on a Windows machine.
 Links will be provided which will include other OS installation instructions.
 
 [virtualenv installation link](https://python.land/virtual-environments/virtualenv)
-1. git clone TODO
+1. git clone https://github.com/Skyyyr/pizzaManager.git
 2. Create your python virtual environment
    1. (Suggested directory install) ../pizzaManager/backend/venv
       1. Run this command and exchange the directory for the actual directory `python -m venv <directory>`
