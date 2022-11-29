@@ -1,0 +1,10 @@
+#root {
+  margin: 0 auto 700px;
+  /*max-width: 1280px;*/
+  /*padding: 2rem;*/
+  text-align: center;
+}
+
+.navbar {
+  width: 800px;
+}
