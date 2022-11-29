@@ -122,6 +122,7 @@ AUTH_USER_MODEL = 'api.PizzaOwner'
 
 # This is a unique situation to solve FireFox users
 mimetypes.add_type("application/javascript", ".js", True)
+mimetypes.add_type("text/css", ".css", True)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
