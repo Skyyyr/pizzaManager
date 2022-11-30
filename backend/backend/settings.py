@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-f^&ejhd4!bz3+ou9-u0k4j4x5s&1=v3dimc(*+l1-u-(n0)e(1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CSRF_TRUSTED_ORIGINS = ['romeosadventure.com', 'http://romeosadventure.com', 'https://romeosadventure.com']
+CSRF_TRUSTED_ORIGINS = ['http://romeosadventure.com', 'https://romeosadventure.com']
 
 ALLOWED_HOSTS = ['*']
 
