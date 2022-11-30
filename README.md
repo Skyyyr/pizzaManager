@@ -16,6 +16,7 @@ Links will be provided which will include other OS installation instructions.
 
 [virtualenv installation link](https://python.land/virtual-environments/virtualenv)
 1. git clone https://github.com/Skyyyr/pizzaManager.git
+   1. (branch should be master, not production)
 2. Create your python virtual environment
    1. (Suggested directory install) ../pizzaManager/backend/venv
       1. Run this command and exchange the directory for the actual directory `python -m venv <directory>`
@@ -35,8 +36,9 @@ The link provided covers each OS type on how to use the run command
 1. `py manage.py runserver`
 2. Build the models for your local db (sqlite)
 [sqlite with django](https://docs.djangoproject.com/en/4.1/topics/migrations/#sqlite)
-   1. `./manage.py makemigrations`
-   2. `./manage.py migrate`
+   1. cd into the backend directory (pizzaManager/backend)
+   2. `python3 manage.py makemigrations`
+   3. `python3 manage.py migrate`
 3. Build your static files
    1. `npm run build`
 4. open your preferred web browser and go to this location:
