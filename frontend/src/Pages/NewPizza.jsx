@@ -137,7 +137,7 @@ function NewPizza() {
 
       //To help with splitting later we want to only add a comma when there's a next
       if ((ingredientNames.length - 1) > idx) {
-        ingredientString += ","
+        ingredientString += ",";
       }
     });
 

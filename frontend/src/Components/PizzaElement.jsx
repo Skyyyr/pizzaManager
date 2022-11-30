@@ -1,6 +1,5 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
-import UpdatePizza from "./UpdatePizza.jsx";
 import {Offcanvas} from "react-bootstrap";
 
 function PizzaElement({pizzaName}) {
@@ -9,7 +8,7 @@ function PizzaElement({pizzaName}) {
   const [allIngredients, setAllIngredients] = useState([]);
   const [show, setShow] = useState(false);
 
-  let activeIngredientList = []
+  let activeIngredientList = [];
 
   const handleClose = () => setShow(false);
   const handleOpen = () => setShow(true);
@@ -79,8 +78,8 @@ function PizzaElement({pizzaName}) {
   }
 
   function handleUpdatePizza() {
-    handleOpen()
-    getActiveIngredients()
+    handleOpen();
+    getActiveIngredients();
     getAllIngredients().catch((e) => console.log("Error " + e));
   }
   
@@ -134,15 +133,13 @@ function PizzaElement({pizzaName}) {
       return;
     }
 
-    console.log("Passed");
-
     let ingredientString = '';
     list.sort().forEach((ingredient, idx) => {
       ingredientString += ingredient;
 
       //To help with splitting later we want to only add a comma when there's a next
       if ((list.length - 1) > idx) {
-        ingredientString += ","
+        ingredientString += ",";
       }
     });
 
@@ -157,7 +154,7 @@ function PizzaElement({pizzaName}) {
       });
 
     if (resp.data['pizza'] === 'success') {
-      window.location.reload()
+      window.location.reload();
     } else {
       alert("Your pizza name or ingredients were not valid for updating. Ensure the name and ingredients are unique.");
     }
@@ -166,8 +163,8 @@ function PizzaElement({pizzaName}) {
   useEffect(() => {
     handleGetPizzaDetails()
       .catch((e) => {
-        console.log("Caught an error at useEffect with " + e)
-      })
+        console.log("Caught an error at useEffect with " + e);
+      });
   }, []);
 
   return (
