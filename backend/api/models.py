@@ -59,7 +59,7 @@ class Pizza(models.Model):
 
     class Meta:
         # unique_together = ['pizza_owner', 'pizza_name', 'topping_list']
-        unique_together = (('pizza_owner', 'pizza_name'), ('pizza_owner', 'topping_list'))
+        unique_together = (('pizza_owner', 'pizza_name'), ('pizza_name', 'topping_list'))
 
     def return_owner_and_pizza(self):
         return f"{self.pizza_owner}, {self.pizza_name}, {self.topping_list}"
