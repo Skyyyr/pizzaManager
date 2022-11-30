@@ -4,7 +4,14 @@ The authentication system doesn't require a real e-mail but one will be provided
 
 Each owner (account) will be able to create their own menu to include their own unique toppings, and pizzas.
 
-Provided email and password:
+You can create an account by using a dummy email and password.
+* Example:
+* email: fake@fake.com
+* password: 12345678
+
+###### If you would rather use an account I made already then the info is as follows:
+* email: sky@sky.com
+* password: 12312345
 
 React (JS) and Django (Python) frameworks were used to create this website.
 
