@@ -58,7 +58,11 @@ class Pizza(models.Model):
     REQUIRED_FIELDS = [pizza_owner, pizza_name, topping_list]
 
     class Meta:
-        unique_together = ['pizza_owner', 'pizza_name', 'topping_list']
+        # unique_together = ['pizza_owner', 'pizza_name', 'topping_list']
+        constraints = [
+            models.UniqueConstraint(fields=['pizza_owner', 'pizza_name'], name='unique_pizza_owner_name'),
+            models.UniqueConstraint(fields=['pizza_owner', 'topping_list'], name='unique_pizza_owner_topping')
+        ]
 
     def return_owner_and_pizza(self):
         return f"{self.pizza_owner}, {self.pizza_name}, {self.topping_list}"
